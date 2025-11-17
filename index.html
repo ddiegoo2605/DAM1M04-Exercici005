@@ -3,9 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Transcions</title>
+    <link rel="icon" href="./assets/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="estils.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+            <nav>
+                <a class="nav_box" href="./galeria.html">ANIMACIONS</a>
+                <a class="nav_box" href="./guia-estil.html">FONTS + MATERIAL ICONS</a>
+            </nav>
+    </header>
+    <input type="checkbox" id="play" hidden>
+    <section class="hero">
+        <h1>Transicions CSS</h1>
+        <h3>Exemples de transicions per fer servir a la teva pàgina web fent servir CSS </h3>
+        <label for="play" class="boton_hero" href="#targetes">PLAY</label>   
+    </section>
+    
+    
+    <section id="targetes" class="box">
+            <h3>Targetes interactives</h3>
+            <p>Exemples de transition-timing-function.</p>
+            
+            <div class="columna-targetes">
+                <article class="targeta-ease">
+                    <h3>EASE</h3>
+                    <p>Transició suau</p>
+                    <img class="correcaminos_ease" src="./assets/img/transicion.png" alt="">
+                </article>
+                <article class="targeta-ease-in-out">
+                    <h3>EASE-IN-OUT</h3>
+                    <p>Lenta al principi i al final</p>
+                    <img class="correcaminos_ease-in-out" src="./assets/img/transicion.png" alt="">
+                </article>
+                <article class="targeta-linear">
+                    <h3>LINEAR</h3>
+                    <p>Velocitat constant</p>
+                    <img class="correcaminos_linear" src="./assets/img/transicion.png" alt="">
+                </article>
+            </div>
+        </section>
+        <section class="box">
+            <h3>Targeta giratoria</h3>
+            <p>Descobreix qui hi ha a la casa. (La imatge gira quan el cursor està a sobre)</p>
+                <div class="flip-card">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <h4>Vista frontal</h4>
+                            <img class="imatge_giratoria" src="./assets/img/casa_giratoria_.png" alt="Front">
+                        </div>
+                        <div class="flip-back">
+                            <h4>Vista dorsal.</h4>
+                            <p>Un estudiant de programació </p>
+                            <img src="./assets/img/programador_cansado.png" alt="Back">
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="box box-opacitat">
+            <h3>Imatge amb opacitat</h3>
+            <p>La imatge passa de desaturada a completa quan hi passes el cursor per sobre.</p>
+            <div class="container-opacitat">
+                <img class="imatge_opacitat" src="./assets/img/programmer-problems.png" alt="">
+            </div>
+
+        </section>
+        <section class="box box-menu-secundari">
+            <h3>Menú secundari</h3>
+            <p>Opcions amb transició de color i letter-spacing.</p>
+
+            <nav class="menu-secundari">
+                <a href="#">Opció 1</a>
+                <a href="#">Opció 2</a>
+                <a href="#">Opció 3</a>
+            </nav>
+        </section>
+
+    
+    
+    <footer></footer>
     
 </body>
 </html>
