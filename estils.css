@@ -70,6 +70,13 @@ h3{
     max-width: 100%;
     height: auto;  
 }
+.columna-targetes article{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
 
 
 /* Cuando se pulsa PLAY (checkbox marcado) */
