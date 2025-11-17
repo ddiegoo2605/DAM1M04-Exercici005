@@ -9,10 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=play_arrow" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=conveyor_belt" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
             <nav>
+                <a class="nav_box" href="./galeria.html">TRANSICIONS</a>
                 <a class="nav_box" href="./galeria.html">ANIMACIONS</a>
                 <a class="nav_box" href="./guia-estil.html">FONTS + MATERIAL ICONS</a>
             </nav>
@@ -21,40 +27,63 @@
     <section class="hero">
         <h1>Transicions CSS</h1>
         <h3>Exemples de transicions per fer servir a la teva pàgina web fent servir CSS </h3>
-        <label for="play" class="boton_hero" href="#targetes">PLAY</label>   
+           
     </section>
     
-    
+    <section class="contenidor-doble">
     <section id="targetes" class="box">
-            <h3>Targetes interactives</h3>
+            <h3>Desplaçament</h3>
             <p>Exemples de transition-timing-function.</p>
+            <label for="play" class="boton_hero" href="#targetes">PLAY</label>
             
             <div class="columna-targetes">
                 <article class="targeta-ease">
                     <div class="textos">
                         <h3>EASE</h3>
                         <p>Transició suau</p>
+                            <code>.correcaminos_ease{<br>transition: transform 2s ease;}</code>
+                        
                     </div>
+                    <div class="movimimento-img">
                     <img class="correcaminos_ease" src="./assets/img/transicion.png">
+                    </div>
                 </article>
             
                 <article class="targeta-ease-in-out">
                     <div class="textos">
                         <h3>EASE-IN-OUT</h3>
                         <p>Lenta al principi i al final</p>
+                        <code>.correcaminos_ease-in-out{<br>
+                            transition: transform 2s ease-in-out;}</code>
                     </div>
+                    <div class="movimimento-img">
                     <img class="correcaminos_ease-in-out" src="./assets/img/transicion.png" alt="">
+                    </div>
                 </article>
                 <article class="targeta-linear">
+                    <div class="textos">
                     <h3>LINEAR</h3>
                     <p>Velocitat constant</p>
+                    <code>.correcaminos_ease-in-out{<br>transition: transform 2s linear;}</code>
+                    </div>
+                    <div class="movimimento-img">
                     <img class="correcaminos_linear" src="./assets/img/transicion.png" alt="">
+                    </div>
                 </article>
             </div>
         </section>
         <section class="box">
-            <h3>Targeta giratoria</h3>
+            <h3>Imatge giratoria</h3>
             <p>Descobreix qui hi ha a la casa. (La imatge gira quan el cursor està a sobre)</p>
+            <div class="code">
+            <p><u><strong>Estat inicial:</strong></u></p>
+                <code>.flip-inner{transition: transform 0.6s;transform-style:preserve-3d;}</code>
+                <p><u><strong>Acció al pasar el cursor a sobre:</strong></u></p>
+                <code>.flip-card:hover .flip-inner{transform: rotateY(180deg);}</code>
+                <p><u><strong>Acció que retorna al estat inicial:</strong></u></p>
+                <code>.flip-back{transform: rotateY(180deg);}
+                </code>
+            </div>
                 <div class="flip-card">
                     <div class="flip-inner">
                         <div class="flip-front">
@@ -69,6 +98,7 @@
                     </div>
                 </div>
         </section>
+    </section>
         <section class="box box-opacitat">
             <h3>Imatge amb opacitat</h3>
             <p>La imatge passa de desaturada a completa quan hi passes el cursor per sobre.</p>

@@ -1,20 +1,22 @@
 html,body{height: 100%;
 margin: 0;}
-#header{
-    position: sticky;
+header{
+    position: fixed;
     top:0;
-    z-index: 10;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 }
 nav{
     display: flex;
     justify-content: center;
     gap: 80px;
     padding: 15px 0;
-    position: sticky;
+    border-radius: 0 0 20px 20px;
     top: 0;
     z-index: 10;
     font-family: "Stack Sans Notch", sans-serif;
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.836);
     text-decoration: none;
 }
 
@@ -44,10 +46,17 @@ body{
 h1{
     font-family: "Stack Sans Notch", sans-serif;
     font-size: 90px;
+    text-shadow: 5px 5px 15px rgba(142, 66, 183, 0.7) ;
+    
 }
 h3{
     font-family: "Stack Sans Notch", sans-serif;
-    font-size: 30px ;
+    font-size: 35px ;
+}
+p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 550 ;
+    font-size: 20px;
 }
 .boton_hero{
     display: inline-block;
@@ -56,14 +65,36 @@ h3{
     border: 2px solid black;
     transition: 0.25s ease;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 24px;
     border-radius: 16px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     color: rgb(255, 255, 255);
-    margin-top: -40px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     position: relative;
     z-index: 5;
+    box-shadow: 5px 5px 15px rgba(142, 66, 183, 0.7);
+    align-items: center;
+    gap: 8px;
+    line-height: 1;
+   
+}
+.contenidor-doble{
+    display: flex;
+    justify-content: center;
+    gap: 40px;           /* separación entre cajas */
+    width: 100%;
+    margin-top: 40px;
+}
+
+.contenidor-doble .box{
+    width: 45%;          /* para que quepan una al lado de la otra */
+    margin: 0;           /* quitamos el margin automático */
+}
+.columna-targetes{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .columna-targetes img{
@@ -71,57 +102,76 @@ h3{
     height: auto;  
 }
 .columna-targetes article{
+    
     display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+}
+.box{
+    max-width: 700px;     /* 👈 ajusta a tu gusto (400, 450, 550...) */
+    margin: 0 auto;       /* centra la box en su contenedor */
+    padding: 20px 25px;
+}
+.box h2, .box h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.box p{
+    margin: 5px 0 10px 0;
 }
 
+.movimimento-img{
+    width: 150px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+}
+.movimimento-img img{
+    width: 150px;
+}
 
 
 /* Cuando se pulsa PLAY (checkbox marcado) */
-#play:checked ~ #targetes .columna-targetes article{
-    opacity: 1;
-    transform: none;
-    transition: none;
-    
-}
 .correcaminos_ease,
 .correcaminos_ease-in-out,
 .correcaminos_linear{
     width: 150px;
-    transform: translateX(-200px);   /* PUNTO A */
+    transform: translateX(-300px);   /* PUNTO A */
 }
 
 
 
 .correcaminos_ease{
           
-    transition: transform 3s ease;    
+    transition: transform 2s ease;    
 }
 .correcaminos_ease-in-out{
           
-    transition: transform 3s ease-in-out;    
+    transition: transform 2s ease-in-out;    
 }
 .correcaminos_linear{
           
-    transition: transform 3s linear;    
+    transition: transform 2s linear;    
+}
+.textos{
+    flex: 1;
+    text-align: left;
 }
 
-
-#play:checked ~ #targetes .correcaminos_ease{
-    transform: translateX(200px);
-
-}
-#play:checked ~ #targetes .correcaminos_ease-in-out{
-    transform: translateX(200px);
-
-}
-#play:checked ~ #targetes .correcaminos_linear{
-    transform: translateX(200px);
-
+#play:checked ~ .contenidor-doble #targetes .correcaminos_ease,
+#play:checked ~ .contenidor-doble #targetes .correcaminos_ease-in-out,
+#play:checked ~ .contenidor-doble #targetes .correcaminos_linear{
+    transform: translateX(0px);   /* PUNTO B MÁS LEJANO */
 }
 
+.code{
+    justify-content: left;
+    text-align: left;
+    margin-left: 20px;
+}
 .boton_hero:hover{
     transform: scale(1.22) translateY(-5px);
     box-shadow: 5px 5px 15px rgba(142, 66, 183, 0.7);
@@ -134,16 +184,21 @@ h3{
     margin: 60px auto;
     padding: 40px;
     width: 65%;
+    max-height: auto;
     border-radius: 20px;
     box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
+    
 }  
 .flip-card{
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 500px;
     margin: 40px auto;
     perspective: 1000px;
 }
 .flip-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 16px;
 }
 .flip-inner{
