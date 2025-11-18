@@ -90,6 +90,7 @@ p{
 .contenidor-doble .box{
     width: 45%;          /* para que quepan una al lado de la otra */
     margin: 0;           /* quitamos el margin automático */
+    background: linear-gradient(180deg,rgba(142, 66, 183, 0.7), #ffffff);
 }
 .columna-targetes{
     display: flex;
@@ -248,7 +249,9 @@ p{
     font-family: "Stack Sans Notch", sans-serif;
     margin-bottom: 25px;
 }
-
+.box-opacitat{
+    background: linear-gradient(180deg,rgba(142, 66, 183, 0.7), #ffffff);
+}
 .container-opacitat{
     max-width: 400px;
     margin: 0 auto;
@@ -260,6 +263,7 @@ p{
 /* ESTADO INICIAL: apagada / gris / semi-transparente */
 .imatge_opacitat{
     width: 100%;
+    
     display: block;
     opacity: 0.4;
     filter: grayscale(100%);
@@ -286,12 +290,16 @@ p{
 .box-menu-secundari p{
     margin-bottom: 25px;
 }
+.box-menu-secundari{
+    background: linear-gradient(180deg,rgba(142, 66, 183, 0.7), #ffffff);
+}
 
 .menu-secundari{
     display: flex;
     justify-content: center;
     gap: 40px;
     border-radius: 16px;
+    background: linear-gradient(180deg,rgba(142, 66, 183, 0.7), #ffffff);
 }
 
 .menu-secundari a{
