@@ -110,6 +110,25 @@
         <section class="box box-menu-secundari">
             <h3>Menú secundari</h3>
             <p>Opcions amb transició de color i letter-spacing.</p>
+            <code>.menu-secundari a{
+    font-family: "Stack Sans Notch", sans-serif;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+
+    /* ESTADO INICIAL */
+    letter-spacing: 0px;
+    transition:
+        color 0.4s ease,
+        letter-spacing 0.4s ease;
+}
+<br>
+<br>
+/* HOVER — color + separación entre letras */<br>
+.menu-secundari a:hover{
+    color: white;
+    letter-spacing: 3px;
+}</code>
 
             <nav class="menu-secundari">
                 <a href="#">Opció 1</a>

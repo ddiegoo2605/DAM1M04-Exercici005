@@ -88,7 +88,7 @@ p{
 }
 
 .contenidor-doble .box{
-    width: 45%;          /* para que quepan una al lado de la otra */
+    width: 40%;          /* para que quepan una al lado de la otra */
     margin: 0;           /* quitamos el margin automático */
     background: linear-gradient(180deg,rgba(142, 66, 183, 0.7), #ffffff);
 }
@@ -110,16 +110,15 @@ p{
     
 }
 .box{
-    max-width: 700px;     /* 👈 ajusta a tu gusto (400, 450, 550...) */
+    max-width: 700px;     
     margin: 0 auto;       /* centra la box en su contenedor */
     padding: 20px 25px;
 }
 .box h2, .box h3{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0
 }
 .box p{
-    margin: 5px 0 10px 0;
+    margin: 15px 0 10px;
 }
 
 .movimimento-img{
@@ -165,7 +164,7 @@ p{
 #play:checked ~ .contenidor-doble #targetes .correcaminos_ease,
 #play:checked ~ .contenidor-doble #targetes .correcaminos_ease-in-out,
 #play:checked ~ .contenidor-doble #targetes .correcaminos_linear{
-    transform: translateX(0px);   /* PUNTO B MÁS LEJANO */
+    transform: translateX(0px);   /* PUNTO B */
 }
 
 .code{
@@ -183,9 +182,9 @@ p{
 .box{
     background: rgba(142, 66, 183, 0.7);
     margin: 60px auto;
-    padding: 40px;
+    padding: 20px 10px;
     width: 65%;
-    max-height: auto;
+    
     border-radius: 20px;
     box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
     
@@ -296,10 +295,12 @@ p{
 
 .menu-secundari{
     display: flex;
+    margin-top: 10px;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
+    border: 2px solid;
     border-radius: 16px;
-    background: linear-gradient(180deg,rgba(142, 66, 183, 0.7), #ffffff);
+    background-color: rgba(142, 66, 183, 0.7);
 }
 
 .menu-secundari a{
