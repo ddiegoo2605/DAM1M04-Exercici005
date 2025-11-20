@@ -290,17 +290,23 @@ p{
     margin-bottom: 25px;
 }
 .box-menu-secundari{
+    
     background: linear-gradient(180deg,rgba(142, 66, 183, 0.7), #ffffff);
 }
 
 .menu-secundari{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 10px;
     justify-content: center;
-    gap: 30px;
+    gap: 15px;
     border: 2px solid;
     border-radius: 16px;
     background-color: rgba(142, 66, 183, 0.7);
+    padding: 20px;
+    max-width: 380px;
+    margin: 0 auto;
+    height: 250px;
 }
 
 .menu-secundari a{
@@ -308,6 +314,10 @@ p{
     font-size: 22px;
     text-decoration: none;
     color: black;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%;
 
     /* ESTADO INICIAL */
     letter-spacing: 0px;
@@ -318,6 +328,17 @@ p{
 
 /* HOVER — color + separación entre letras */
 .menu-secundari a:hover{
-    color: white;
-    letter-spacing: 3px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 10px;
+}
+
+.footer{
+    text-align: center;
+    margin-top: 70px;
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    background-color: black;
+    opacity: 0.8;
 }
