@@ -22,7 +22,81 @@
                 <a class="nav_box" href="./guia-estil.html">FONTS + MATERIAL ICONS</a>
             </nav>
     </header>
-    <main></main>
+    <main> 
+        <h1>ANIMACIONS</h1>
+        <section class="contenidor-doble">
+            <section class="box loader">
+                <h3>Loader</h3>
+                <h4>Pulsació cor</h4>
+                <p>EL cor fa ús d' animació en tres moments(0%, 50%, 100%) on l'imatge augmenta un 115% al (50%) i retorna a la seva mida original. El movimiment es logra amb el infinite ease-in-out (per una transició suau i infinita)</p><code></code>
+                <div class="regles-loader-cor">
+                    
+                    <div class="regla-css">
+                    <code>
+                    .loader-cor img{ <br>
+                    width: 200px; <br>
+                    animation: pulse 0.8s infinite ease-in-out; <br>
+                    filter: drop-shadow(10px 20px 40px rgb(255, 0, 0)); 
+                    } <br>
+                    </div>
+                    <div class="keyframes-cor">
+                    
+                    @keyframes pulse {<br>
+                        0%{transform: scale(1);} <br>
+                        50%{transform: scale(1.15);} <br>
+                        100%{transform: scale(1);}}</code>
+                    </div>
+                </div>
+                <div class="loader-cor">
+                    <img src="./assets/img/cor_pixelado.png" alt="">
+                </div>
+                <br>
+                
+                <h4>Bounce</h4>
+                <p>Punts amb animació bounce</p>
+                <BR>
+                <P>REGLES </P>
+                <div class="regles-punts">
+                    <div class="regla-css">
+                        <code>.loader-punts{ <br>
+                            display: flex; <br>
+                            justify-content: center; <br>
+                            gap: 18px; <br>
+                            margin-top: 20px;} <br>
+                            <br>
+                            .loader-punts span{ <br>
+                            width: 20px; <br>
+                            height: 20px; <br>
+                            border-radius: 50%; <br>
+                            background: black; <br>
+                            animation: punts-bounce 0.6s ease-in-out infinite; <br>
+                            margin-top: 30px;}</code>
+                    </div>
+                    <div class="keyframes-cor">
+                        <code>@keyframes punts-bounce{ <br>
+                        0%, 100%{ <br>
+                        transform: translateY(0); <br>
+                        opacity: 0.1;} <br>
+                        50%{transform: translateY(-38px);<br>
+                        opacity: 1;}}
+                    </code>
+                    </div>
+                </div>
+                <P> </P>
+                <div class="loader-punts">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h4>Rotació</h4>
+                <div class="rotacio">
+                    <img src="./assets/img/rotacio.png" alt="">
+                </div>
+            </section>
+        </section>
+            
+        </section>
+    </main>
     <footer class="footer">&copy; 2025 DIEGO AGUILAR OJEDA<br>
         <a href="https://github.com/ddiegoo2605/DAM1M04-Exercici005.git">Repositori Github</a>
     </footer>
