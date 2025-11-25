@@ -353,6 +353,32 @@ p{
     
 }
 
+.box-loader{
+    align-items: center;
+    width: 80%;
+    height:auto;
+    background: linear-gradient(180deg,rgba(142, 66, 183, 0.7), #ffffff);
+    margin: 0 auto;
+    border-radius: 40px;
+    padding: 40px 50px;
+
+}
+.box-loader p {
+    text-align: justify;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 40px;               /* separación entre tarjetas */
+    justify-content: center;
+}
+.cards > div{
+    flex: 0 1 calc(50% - 40px);  /* 2 por fila (el -40px compensa el gap) */
+}
+
+
+
 
 .box-loader code{
     justify-content: left;
@@ -394,6 +420,148 @@ p{
     display: flex;
     text-align: left ;
     margin-left: 80px;
+}
+.contenidor-animacions{
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+.contenidor-peça-animada{
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+}
+.peça-principal{
+    width: 120px;
+    height: 120px;
+    border-radius: 30px;
+    margin: 0 auto;
+    background: #ff6ec7;
+    animation: peçaAnimada 2s  ease-in-out infinite alternate;
+}
+
+/* ----------- SCROLL REVEAL – CRUZ ANIMADA ----------- */
+
+.box-scroll{
+    width: 80%;
+    min-height: 1200px; /* Mucho espacio para ver la animación */
+    margin: 100px auto;
+    padding: 100px 60px;
+    border-radius: 40px;
+    background: linear-gradient(180deg, rgba(142,66,183,0.7), #ffffff);
+    text-align: center;
+}
+
+.box-scroll p{
+    margin-top: 120px;
+}
+.scroll-grid{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.scroll-card{
+    width: 260px;
+    padding: 20px;
+  
+}
+.reveal-esquerra{ z-index: 1; }
+
+.reveal-dreta{    z-index: 3; }
+/* BLOC 1 — diagonal izquierda→centro→abajo izquierda */
+.reveal-esquerra{
+    animation: bloc1-cruz 1.3s linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 100%;
+}
+
+/* BLOC 2 — vertical arriba→centro→abajo */
+.reveal-baix{
+    animation: bloc2-cruz 1.3s linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 100%;
+}
+
+/* BLOC 3 — diagonal derecha→centro→abajo derecha */
+.reveal-dreta{
+    animation: bloc3-cruz 1.3s linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 100%;
+}
+
+/* KEYFRAMES */
+
+/* Bloque 1: arriba-izq → centro → abajo-izq */
+/* Bloque 1: izquierda/arriba → punto central → se queda ahí */
+/* Bloque 1: izquierda/arriba → punto central → se queda ahí */
+/* Bloque 1: desde izquierda / arriba → centro → abajo CENTRADO */
+@keyframes bloc1-cruz{
+    0%{
+        opacity: 0;
+        transform: translate(-350px, -150px);
+    }
+    50%{
+        opacity: 1;
+        /* pasa por un punto intermedio (casi centro) */
+        transform: translate(170px, 75px);
+    }
+    100%{
+        opacity: 1;
+        /* +340px en X para llegar a la posición del bloque central */
+        transform: translate(750px, 150px);
+    }
+}
+
+
+/* Bloque 3: desde derecha / arriba → centro → abajo CENTRADO */
+@keyframes bloc3-cruz{
+    0%{
+        opacity: 0;
+        transform: translate(350px, -150px);
+    }
+    50%{
+        opacity: 1;
+        transform: translate(-170px, 75px);
+    }
+    100%{
+        opacity: 1;
+        /* -340px en X para llegar también al centro */
+        transform: translate(-750px, 150px);
+    }
+}
+
+
+
+
+@keyframes peçaAnimada {
+    0%{
+        transform: translateX(-50px) translateY(0px) scale(0.8) rotate(0deg);
+        opacity: 0.3;
+        background:#ff6ec7;
+    }
+
+    33%{
+        transform: translateX(0px) translateY(-50px) scale(1) rotate(120deg);
+        opacity: 1;
+        background:#9c5cff;
+    }
+
+    66%{
+        transform: translateX(50px) translateY(0px) scale(0.9) rotate(240deg);
+        opacity: 0.6;
+        background:#ff9b32;
+    }
+
+    100%{
+        transform: translateX(-50px) translateY(0px) scale(0.8) rotate(360deg);
+        opacity: 0.3;
+        background:#ff6ec7;
+    }
 }
 @keyframes pulse {
     0%{transform: scale(1);}
