@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&family=Stack+Sans+Headline:wght@200..700&family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -32,7 +35,7 @@
                 <div class="corazon">
                 
                 <h2>Pulsació cor</h2>
-                <p>EL cor fa ús d' animació en tres moments(0%, 50%, 100%) on l'imatge augmenta un 115% al (50%) i retorna a la seva mida original. El movimiment es logra amb el infinite ease-in-out (per una transició suau i infinita)</p><code></code>
+                <p>El cor fa ús d' animació en tres moments(0%, 50%, 100%) on l'imatge augmenta un 115% al (50%) i retorna a la seva mida original.</p><code></code>
                 <div class="regles-loader-cor">
                     
                     <div class="regla-css">
@@ -57,7 +60,7 @@
                 <br>
                 <div class="bounce">
                 <h2>Bounce</h2>
-                <p>Punts amb animació bounce</p>
+                <p>Punts amb animació bounce i opacitat </p>
                 <BR>
                 <div class="regles-punts">
                     <div class="regla-css">
@@ -89,6 +92,20 @@
                 </div>
                 <div class="ruleta">
                 <h2>Rotació</h2>
+                <p>Imatge que fa ús de la etiqueta animation: spin (de manera infinta)</p>
+                <div class="regles_ruleta">
+                <div class="regles_css_ruleta">
+                <code>.rotacio img{<br>
+                width: 250px;<br>
+                animation: spin 4s linear infinite;}</code>
+                </div>
+                <div class="regles_keyframes_ruleta">
+                    <code>@keyframes spin{ <br>
+                    from {transform: rotate(0deg);}<br>
+                    to{transform: rotate(360deg);}}</code>
+                </div>
+                </div>
+                
                 <div class="rotacio">
                     <img src="./assets/img/rotacio.png" alt="">
                 </div>
@@ -108,7 +125,7 @@
 
             <section class="box-scroll">
   <h2>Scroll-reveal</h2>
-  <p>Blocs que apareixen amb desplaçament quan fas scroll.</p>
+  <p>Blocs que apareixen de les bandes quan fas scroll.</p>
 
   <div class="scroll-grid">
     <img src="./assets/img/scroll_reveal-1.png" class="scroll-card reveal-esquerra">
@@ -116,8 +133,8 @@
     <img src="./assets/img/scroll_reveal-2.png" class="scroll-card reveal-dreta">
       
   </div>
-  <br>
-  <p>ejemplo de superposicion con scroll-reveal y opacity </p>
+  
+<p>I  torna a opacar-se al finalitzar el scroll</p>  
 </section>
         </section>
             

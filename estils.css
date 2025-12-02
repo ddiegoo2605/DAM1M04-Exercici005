@@ -401,6 +401,10 @@ p{
     margin-top: 30px;
     
 }
+
+.bounce p{
+    text-align: center;
+}
 .loader-cor img{
     width: 200px;
     animation: pulse 0.8s infinite ease-in-out;
@@ -426,6 +430,9 @@ p{
     height: auto;
     border-radius: 40px;
 }
+.contenidor-animacions h2{
+    font-family:"Science Gothic",sans-serif;
+}
 .contenidor-peça-animada{
     height: 220px;
     display: flex;
@@ -441,6 +448,9 @@ p{
     margin: 0 auto;
     background: #ff6ec7;
     animation: peçaAnimada 2s  ease-in-out infinite alternate;
+}
+.peça-card p {
+    text-align: center;
 }
 
 /* ----------- SCROLL REVEAL – CRUZ ANIMADA ----------- */
@@ -511,7 +521,7 @@ p{
         transform: translate(170px, 75px);
     }
     100%{
-        opacity: 1;
+        opacity: 0;
         /* +340px en X para llegar a la posición del bloque central */
         transform: translate(750px, 150px);
     }
@@ -529,7 +539,7 @@ p{
         transform: translate(-170px, 75px);
     }
     100%{
-        opacity: 1;
+        opacity: 0;
         /* -340px en X para llegar también al centro */
         transform: translate(-750px, 150px);
     }
@@ -567,7 +577,9 @@ p{
     0%{transform: scale(1);}
     50%{transform: scale(1.15);}
     100%{transform: scale(1);}}
-
+.loader-punts{
+    margin-top: 100px;
+}
 /* retard per a que vagin un darrere l'altre */
 .loader-punts span:nth-child(2){
     animation-delay: 0.15s;
@@ -580,10 +592,27 @@ p{
     display: flex;
     justify-content: center;
 }
+.ruleta p{
+    text-align: center;
+}
+
+.regles_ruleta{
+    display: flex ;
+}
+.regles_css_ruleta{
+    display: flex;
+    text-align: left;
+}
+.regles_keyframes_ruleta{
+    display: flex;
+    text-align: left;
+    margin-left: 80px;
+}
 
 .rotacio img{
     width: 250px;
-     animation: spin 4s linear infinite;
+    margin-top: 50px;
+    animation: spin 4s linear infinite;
 }
 
 @keyframes spin{
@@ -600,4 +629,113 @@ p{
         transform: translateY(-38px);
         opacity: 1;
     }
+}
+
+.font-showcase h1, h2, h3, p {
+  font-family: "Poppins", sans-serif;
+}
+
+.fw-300 { font-weight: 300; }
+.fw-600 { font-weight: 600; }
+.fw-900 { font-weight: 900; }
+
+.ls-wide { letter-spacing: 2px; }
+.lh-tight { line-height: 1.1; }
+.lh-loose { line-height: 1.8; }
+
+.baseline-demo .baseline {
+  vertical-align: baseline;
+  font-size: 32px;
+  color: #e63946;
+}
+.fs-1rem { font-size: 1rem; }
+.fs-1-25rem { font-size: 1.25rem; }
+.fs-1-5rem { font-size: 1.5rem; }
+.fs-small { font-size: 0.875rem; }
+
+.high-contrast {
+  color: #000;
+  background: #fff;
+  padding: 4px 8px;
+}
+.icon-small { font-size: 24px; }
+.icon-medium { font-size: 40px; }
+.icon-large { font-size: 64px; }
+
+.weight-bold { font-variation-settings: "wght" 700; }
+.filled { font-variation-settings: "FILL" 1; }
+
+.btn-icon, .link-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: #6a4feb;
+  color: white;
+  border-radius: 8px;
+  transition: background .3s, transform .3s;
+}
+
+.btn-icon:hover, .link-icon:hover {
+  background: #8f6fff;
+  transform: translateY(-3px);
+}
+
+/* Contenedor general de la sección */
+.color-table{
+  margin-top: 60px;
+  text-align: left;
+}
+
+/* La tabla en sí */
+.color-table table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  overflow: hidden;           /* para que el radius afecte a todo */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Cabecera */
+.color-table th{
+  background: #6a4feb;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+/* Celdas normales */
+.color-table td{
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Rayado de filas */
+.color-table tr:nth-child(even) td{
+  background: rgba(0,0,0,0.02);
+}
+
+/* Última fila sin borde inferior fuerte */
+.color-table tr:last-child td{
+  border-bottom: none;
+}
+
+/* Opcional: columna de nombres un pelín más marcada */
+.color-table td:first-child{
+  font-weight: 600;
+}
+.color-swatch{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+.color-primary{
+  background: #6a4feb;
 }
