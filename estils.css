@@ -453,11 +453,11 @@ p{
     text-align: center;
 }
 
-/* ----------- SCROLL REVEAL – CRUZ ANIMADA ----------- */
+/* ----------- SCROLL REVEAL – Palmera ANIMADA ----------- */
 
 .box-scroll{
     width: 80%;
-    min-height: 1200px; /* Mucho espacio para ver la animación */
+    min-height: 1200px; 
     margin: 100px auto;
     padding: 100px 60px;
     border-radius: 40px;
@@ -506,10 +506,7 @@ p{
 
 /* KEYFRAMES */
 
-/* Bloque 1: arriba-izq → centro → abajo-izq */
-/* Bloque 1: izquierda/arriba → punto central → se queda ahí */
-/* Bloque 1: izquierda/arriba → punto central → se queda ahí */
-/* Bloque 1: desde izquierda / arriba → centro → abajo CENTRADO */
+
 @keyframes bloc1-cruz{
     0%{
         opacity: 0;
